@@ -18,26 +18,32 @@
 
         <div class="grid md:grid-cols-3 gap-4 mb-6">
             <div>
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/1.png') }}" alt="frontend festival musica">
-            </div>
-            <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/2.png') }}" alt="frontend Udemy clon">
-            </div>
-            <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/3.png') }}" alt="frontend sunnyside">
+                <a href="http://localhost/posts/Rock%20&%20EDM%20Festival">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/2-1.png') }}" alt="frontend festival musica">
+                </a>
             </div>
             <div>
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/4.png') }}" alt="frontend festival musica">
+                <a href="http://localhost/posts/DevStagram">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/6.png') }}" alt="frontend festival musica">
+                </a>
+            </div>
+            <div>
+                <a href="http://localhost/posts/Tip%20Splitter">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/2.png') }}" alt="frontend festival musica">
+                </a>
             </div>
             <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/5.png') }}" alt="frontend Udemy clon">
+                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/3.png') }}" alt="frontend sunnyside">
+            </div>
+            <div>
+                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/4.png') }}" alt="frontend festival musica">
             </div>
             <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/front/6.png') }}" alt="frontend sunnyside">
+                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/5.png') }}" alt="frontend Udemy clon">
             </div>
         </div>
         <a 
-        class=" bg-pink-500 hover:bg-pink-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="#">Ver más...</a>
+        class=" bg-pink-500 hover:bg-pink-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="/Front">Ver más...</a>
     </main>
 
     <section class=" container text-center mx-auto">
@@ -51,9 +57,9 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat voluptatibus, adipisci doloribus iste velit ducimus odit ipsa fugit nemo dolore possimus, in nostrum quis accusantium harum sunt, excepturi illo? Tempore!
                 </p>
 
-                <a class=" bg-blue-500 hover:bg-blue-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="#">Ver más...</a>
+                <a class=" bg-blue-500 hover:bg-blue-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="/Back">Ver más...</a>
             </div>
-            <img class="col-span-2 rounded shadow-lg" src="{{ asset('img/back/index-back.png') }}" alt="devstagram post">
+            <img class="col-span-2 rounded shadow-lg" src="{{ asset('img/Back/1-1.png') }}" alt="devstagram post">
         </div>
     </section>
 
@@ -61,14 +67,14 @@
         <h2 class="p-6 text-7xl text-black font-bold bg-yellow-300 rounded-xl mb-6 shadow-lg">Utilidades JS</h2>
         <div class="">
             <div class="grid grid-cols-3 gap-4  items-center mb-6">
-                <img class="col-span-2 w-full shadow-lg rounded" src="{{ asset('img/utilities-js/1.png') }}" alt="tip generator">
+                <img class="col-span-2 w-full shadow-lg rounded" src="{{ asset('img/Js/3-1.png') }}" alt="tip generator">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
             </div>
             <div class="grid grid-cols-3 gap-4  items-center mb-6">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
-                <img class="col-span-2 w-full shadow-lg rounded " src="{{ asset('img/utilities-js/2.png') }}" alt="email sender">
+                <img class="col-span-2 w-full shadow-lg rounded " src="{{ asset('img/Js/2.png') }}" alt="email sender">
             </div>
-            <a class=" bg-yellow-300 hover:bg-yellow-400 px-6 py-2 text-2xl rounded-xl text-black m-8" href="#">Ver más...</a>
+            <a class=" bg-yellow-300 hover:bg-yellow-400 px-6 py-2 text-2xl rounded-xl text-black m-8" href="/Js">Ver más...</a>
         </div>
     </section>
 @endsection
