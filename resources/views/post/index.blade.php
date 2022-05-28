@@ -23,8 +23,9 @@
                     @foreach ($posts as $post)
                         <div class="">
                             <a href="{{ route('posts.show', ['post' => $post]) }}">
-                                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->id . '-1.png'}}" alt="Imagen del post {{ $post->titulo }}"> 
+                                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-0.webp'}}" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"> 
                             </a>
+                            {{-- . '-' . $key . '.webp' --}}
                         </div>
                     @endforeach
                 </div>

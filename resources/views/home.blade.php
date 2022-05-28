@@ -18,22 +18,22 @@
 
         <div class="grid md:grid-cols-3 gap-4 mb-6">
             <div>
-                <a href="http://localhost/posts/Rock%20&%20EDM%20Festival">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/2-1.png') }}" alt="frontend festival musica">
+                <a href="http://localhost/posts/Rock_&_EDM_Festival">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-0.webp') }}" alt="frontend festival musica">
                 </a>
             </div>
             <div>
                 <a href="http://localhost/posts/DevStagram">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/6.png') }}" alt="frontend festival musica">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-1.webp') }}" alt="frontend festival musica">
                 </a>
             </div>
             <div>
-                <a href="http://localhost/posts/Tip%20Splitter">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/2.png') }}" alt="frontend festival musica">
+                <a href="http://localhost/posts/Tip_Splitter">
+                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-2.webp') }}" alt="frontend festival musica">
                 </a>
             </div>
             <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/3.png') }}" alt="frontend sunnyside">
+                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Dev-0.webp') }}" alt="frontend sunnyside">
             </div>
             <div>
                 <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/4.png') }}" alt="frontend festival musica">

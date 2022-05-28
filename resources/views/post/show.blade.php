@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo')
-    {{ $post->titulo }}
+    {{ str_replace('_', ' ', $post->titulo) }}
 @endsection
 
 @section('contenido')
@@ -14,7 +14,32 @@
     @endif
     <div class="container mx-auto md:flex">
         <div class=" md:w-1/2">
-            <img class="rounded" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->id . '-1.png'}}" alt="Imagen del post {{ $post->titulo }}">
+
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        @for ($i = 0; $i < $post->num_Img; $i++)
+                            <div class="carousel-item active relative float-left w-full">
+                                <img src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-' . $i . '.webp' }}" class="glide__slide" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"
+                                />
+                            </div>
+                        @endfor
+                    </ul>
+                </div>
+
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
             @auth
                 <form action="{{ route('home') }}" method="POST">
@@ -54,6 +79,9 @@
             @endif
         </div>
     </div>
-    
+
+    @push('scripts')
+        <script src="{{ asset('js/app.js') }}"></script>
+    @endpush
 @endsection
 

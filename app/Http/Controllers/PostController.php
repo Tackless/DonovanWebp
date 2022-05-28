@@ -6,6 +6,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -34,7 +35,6 @@ class PostController extends Controller
     
     public function store(Request $request)
     {
-        // dd(auth()->user()->id);
         $this->validate($request, [
             'titulo' => 'required|max:255|unique:posts',
             'descripcion' => 'required',
@@ -44,9 +44,29 @@ class PostController extends Controller
             'github_link' => 'url'
         ]);
 
+        if ($request->imagen[0]) {
+            /* Getting the file from the request. */
+            $imagenes = $request->file('imagen');
+
+            foreach ($imagenes as $key => $imagen) {
+
+                /* Generating a unique name for the image. */
+                $nombreImagen = str_replace(' ', '_', $request->titulo) . '-' . $key . '.webp';
+
+                /* Creating an image object from the file. */
+                $imagenServidor = Image::make($imagen)->encode('webp');
+
+                /* Creating a path to the image. */
+                $imagenPath = public_path('img') . '/' . $request->categoria . '/' .  $nombreImagen;
+
+                /* Saving the image to the path specified. */
+                $imagenServidor->save($imagenPath);
+            }
+        }
+
         // Una forma de crear un registro
         Post::create([
-            'titulo' => $request->titulo,
+            'titulo' => str_replace(' ', '_', $request->titulo),
             'descripcion' => $request->descripcion,
             'num_Img' => $request->num_Img,
             'categoria' => $request->categoria,

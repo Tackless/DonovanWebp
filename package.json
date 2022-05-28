@@ -10,9 +10,9 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@glidejs/glide": "^3.5.2",
         "autoprefixer": "^10.4.7",
         "axios": "^0.25",
-        "gulp": "^4.0.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.4.14",

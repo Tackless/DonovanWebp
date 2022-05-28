@@ -8,7 +8,7 @@
     <div class=" md:flex md:items-center md:justify-center mt-6">
         <div class=" md:w-1/2 p-10 bg-white rounded-lg shadow-xl mt-10 md:mt-0">
             <h2 class=" text-center text-xl mb-5">@yield('titulo')</h2>
-            <form action="{{ route('posts.store') }}" method="POST" novalidate>
+            <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf {{-- Elemento de seguridad INDISPENSABLE --}}
 
                 <div class="mb-5">
@@ -48,6 +48,13 @@
                         {{ $message }}
                     </p>
                     @enderror
+                </div>
+
+                <div class="mb-5">
+                    <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">
+                        Imagen Perfil
+                    </label>
+                    <input type="file" id="imagen" name="imagen[]" class="border p-3 w-full rounded-lg " value="" accept=".jpg, .jpeg, .png" multiple>
                 </div>
 
                 <div class="mb-5">

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Donovan WebP | @yield('titulo')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @stack('styles')
 </head>
 <body class=" bg-slate-400">
     
@@ -37,5 +38,6 @@
     <footer class=" mt-10 text-center p-5 text-gray-500 font-bold uppercase">
         <a class=" font-bold text-black" href="{{ route('login') }}">Donovan WebP</a> - Todos los derechos reservados {{ now()->year }} &copy;
     </footer>
+    @stack('scripts')
 </body>
 </html>
