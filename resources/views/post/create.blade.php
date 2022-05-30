@@ -41,7 +41,7 @@
                     <label for="num_Img" class="mb-2 block uppercase text-gray-500 font-bold">
                         Número de Imagenes
                     </label>
-                    <input type="number" min="0" max="9" id="num_Img" name="num_Img" placeholder="Número de Imagenes del post" class="border p-3 w-full rounded-lg @error('num_Img') border-red-500 @enderror" value="{{ old('num_Img') }}">
+                    <input type="number" min="0" max="25" id="num_Img" name="num_Img" placeholder="Número de Imagenes del post" class="border p-3 w-full rounded-lg @error('num_Img') border-red-500 @enderror" value="{{ old('num_Img') }}">
                     
                     @error('num_Img')
                     <p class=" bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
@@ -52,7 +52,7 @@
 
                 <div class="mb-5">
                     <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">
-                        Imagen Perfil
+                        Imagenes del Post
                     </label>
                     <input type="file" id="imagen" name="imagen[]" class="border p-3 w-full rounded-lg " value="" accept=".jpg, .jpeg, .png" multiple>
                 </div>

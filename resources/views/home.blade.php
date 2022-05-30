@@ -16,31 +16,14 @@
     <main class=" container text-center mx-auto mb-10">
         <h2 class="p-6 text-7xl text-white font-bold bg-pink-500 rounded-xl mb-6 shadow-lg">Front-End</h2>
 
-        <div class="grid md:grid-cols-3 gap-4 mb-6">
-            <div>
-                <a href="http://localhost/posts/Rock_&_EDM_Festival">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-0.webp') }}" alt="frontend festival musica">
-                </a>
-            </div>
-            <div>
-                <a href="http://localhost/posts/DevStagram">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-1.webp') }}" alt="frontend festival musica">
-                </a>
-            </div>
-            <div>
-                <a href="http://localhost/posts/Tip_Splitter">
-                    <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Udemy_Clon-2.webp') }}" alt="frontend festival musica">
-                </a>
-            </div>
-            <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/Dev-0.webp') }}" alt="frontend sunnyside">
-            </div>
-            <div>
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/4.png') }}" alt="frontend festival musica">
-            </div>
-            <div class="">
-                <img class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/5.png') }}" alt="frontend Udemy clon">
-            </div>
+        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-6 justify-center text-center">
+            @foreach ($postsFront as $post)
+                <div class="flex justify-center items-center">
+                    <a href="{{ route('posts.show', ['post' => $post]) }}">
+                        <img class=" overflow-hidden hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img/Front/' . $post->titulo . '-0.webp') }}" alt="frontend festival musica">
+                    </a>
+                </div>
+            @endforeach
         </div>
         <a 
         class=" bg-pink-500 hover:bg-pink-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="/Front">Ver más...</a>
@@ -67,12 +50,12 @@
         <h2 class="p-6 text-7xl text-black font-bold bg-yellow-300 rounded-xl mb-6 shadow-lg">Utilidades JS</h2>
         <div class="">
             <div class="grid grid-cols-3 gap-4  items-center mb-6">
-                <img class="col-span-2 w-full shadow-lg rounded" src="{{ asset('img/Js/3-1.png') }}" alt="tip generator">
+                <img class="col-span-2 w-full shadow-lg rounded" src="{{ asset('img/Js/Enviar_Email-0.webp') }}" alt="tip generator">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
             </div>
             <div class="grid grid-cols-3 gap-4  items-center mb-6">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
-                <img class="col-span-2 w-full shadow-lg rounded " src="{{ asset('img/Js/2.png') }}" alt="email sender">
+                <img class="col-span-2 w-full shadow-lg rounded " src="{{ asset('img/Js/Tip_Splitter-0.webp') }}" alt="email sender">
             </div>
             <a class=" bg-yellow-300 hover:bg-yellow-400 px-6 py-2 text-2xl rounded-xl text-black m-8" href="/Js">Ver más...</a>
         </div>

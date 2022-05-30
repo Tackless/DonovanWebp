@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
@@ -36,12 +36,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'titulo' => 'required|max:255|unique:posts',
+            'titulo' => 'required|max:255|unique:posts,titulo',
             'descripcion' => 'required',
-            'num_Img' => 'numeric|min:0|max:9',
-            'categoria' => 'required',
-            'link' => 'url',
-            'github_link' => 'url'
+            'num_Img' => 'numeric|min:0|max:25',
+            'categoria' => 'required'
         ]);
 
         if ($request->imagen[0]) {
@@ -82,5 +80,22 @@ class PostController extends Controller
         return view('post.show', [
             'post' => $post
         ]);
+    }
+
+    public function destroy(Post $post)
+    {
+        $categoria = $post->categoria;
+        // $this->authorize('delete', $post);
+        $post->delete();
+
+        // Eliminar la imagen
+        for ($i=0; $i < $post->num_Img; $i++) { 
+            $imagenPath = public_path('img') . '/' . $categoria . '/' . str_replace(' ', '_', $post->titulo) . '-' . $i . '.webp';
+            if(File::exists($imagenPath)) {
+                unlink($imagenPath);
+            }
+        }
+        
+        return redirect()->route('posts.index', $categoria);
     }
 }
