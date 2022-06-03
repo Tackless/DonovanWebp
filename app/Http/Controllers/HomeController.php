@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function __invoke(Request $request, Post $post)
     {
-        $postsFront = Post::where('categoria', 'Front')->latest()->get();
+        $postsFront = Post::where('categoria', 'Front')->latest()->limit('6')->get();
         
         return view('home', [
             'postsFront' => $postsFront

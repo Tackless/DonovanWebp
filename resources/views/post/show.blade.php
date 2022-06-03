@@ -6,11 +6,11 @@
 
 @section('contenido')
     @if ($post->categoria === 'Front')
-        <h2 class="p-6 text-7xl text-white font-bold bg-pink-500 mb-6 shadow-lg">@yield('titulo')</h2>
+        <h1 class="p-6 text-7xl text-white font-bold bg-pink-500 mb-6 shadow-lg">@yield('titulo')</h1>
     @elseif ($post->categoria === 'Back')
-        <h2 class="p-6 text-7xl text-white font-bold bg-blue-600 mb-6 shadow-lg">@yield('titulo')</h2>
+        <h1 class="p-6 text-7xl text-white font-bold bg-blue-600 mb-6 shadow-lg">@yield('titulo')</h1>
     @else
-        <h2 class="p-6 text-7xl text-black font-bold bg-yellow-300 mb-6 shadow-lg">@yield('titulo')</h2>
+        <h1 class="p-6 text-7xl text-black font-bold bg-yellow-300 mb-6 shadow-lg">@yield('titulo')</h1>
     @endif
     <div class="container mx-auto">
         <div class="">

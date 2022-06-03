@@ -20,9 +20,10 @@
                 <a class="p-2 border-solid border-2 border-pink-500 rounded hover:bg-pink-600 hover:text-white  duration-500 hover:border-white" href="/Front">Front</a>
                 <a class="p-2 border-solid border-2 border-blue-500 rounded hover:bg-blue-600 hover:text-white  duration-500 hover:border-white" href="/Back">Back</a>
                 <a class="p-2 border-solid border-2 border-yellow-300 rounded hover:bg-yellow-400 hover:text-white  duration-500 hover:border-white" href="/Js">Js</a>
-                <a class="p-2 border-solid border-2 border-gray-300 rounded hover:bg-gray-400 hover:text-white  duration-500 hover:border-white" href="#">Contacto</a>
+                <a class="p-2 border-solid border-2 border-gray-300 rounded hover:bg-gray-400 hover:text-white  duration-500 hover:border-white" href="{{ route('contacto') }}">Contacto</a>
                 @auth
                     <a class="p-2 border-solid border-2 border-gray-300 rounded hover:bg-gray-400 hover:text-white  duration-500 hover:border-white" href="{{ route('posts.create') }}">Crear</a>
+                    <a class="p-2 border-solid border-2 border-gray-300 rounded hover:bg-gray-400 hover:text-white  duration-500 hover:border-white" href="{{ route('contacto.show') }}">Listado</a>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf {{-- Elemento de seguridad INDISPENSABLE --}}
                         <button type="submit" class=" w-full md:w-auto p-2 border-solid border-2 border-gray-300 rounded hover:bg-gray-400 hover:text-white  duration-500 hover:border-white">Cerrar Sesión</button>
@@ -31,8 +32,6 @@
             </nav>
         </div>
     </header>
-
-    <hr>
 
     @yield('contenido')
 
