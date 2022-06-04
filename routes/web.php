@@ -34,6 +34,7 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
 Route::post('/contacto', [ContactoController::class, 'store']);
 Route::get('/contacto/lista', [ContactoController::class, 'show'])->name('contacto.show');
+Route::delete('/contacto/{contacto}', [ContactoController::class, 'destroy'])->name('contacto.destroy');
 
 // Posts
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');

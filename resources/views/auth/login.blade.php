@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Inicia Sesión en DevStagram
+    Iniciar Sesión
 @endsection
 
 @section('contenido')
+    <h1 class="p-6 text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
+
     <div class="md:flex md:justify-center md:gap-10 md:items-center mt-6">
         <div class="md:w-6/12">
             <img src="{{ asset('img/logo.png') }}" alt="Imagen registro">
@@ -18,7 +20,6 @@
                     {{ session('mensaje') }}
                 </p>
                 @endif
-
                 
                 <div class="mb-5">
                     <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -32,7 +33,6 @@
                         </p>
                     @enderror
                 </div>
-
                 
                 <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -50,7 +50,6 @@
                 <div class="mb-5">
                     <input type="checkbox" name="remember" id="remember" > <label for="remember" class="text-sm text-gray-500">Mantener sesión abierta</label>
                 </div>
-
 
                 <input type="submit" value="Iniciar Sesión" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg">
             </form>

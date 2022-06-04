@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contacto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactoController extends Controller
 {
@@ -39,6 +40,17 @@ class ContactoController extends Controller
 
     public function show()
     {
-        dd('holo');
+        $contactos = DB::table('contactos')->latest()->paginate(10);
+
+        return view('contacto.show', [
+            'contactos' => $contactos
+        ]);
+    }
+
+    public function destroy(Contacto $contacto)
+    {
+        $contacto->delete();
+        
+        return back();
     }
 }

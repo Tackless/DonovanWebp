@@ -5,12 +5,9 @@
 @endsection
 
 @section('contenido')
-    <h1 class="p-6 text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
+    <h1 class="p-6 text-7xl text-white font-bold bg-orange-500 mb-6 shadow-lg">@yield('titulo')</h1>
 
     <div class="md:flex md:justify-center md:gap-10 md:items-center mt-6">
-        <div class="md:w-3/12">
-            <img src="{{ asset('img/logo.png') }}" alt="Imagen contacto">
-        </div>
         <div class="md:w-6/12 bg-white p-6 rounded-lg shadow-xl">
             @if (session('mensaje'))
                 <div class="p-2 rounded-lg mb-6 text-white text-center uppercase font-bold bg-green-500">
