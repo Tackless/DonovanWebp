@@ -5,7 +5,7 @@
 @endsection 
 
 @section('contenido')
-    <h1 class="p-6 text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
+    <h1 class="p-6 text-4xl md:text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
 
     <div class=" md:flex md:items-center md:justify-center mt-6">
         <div class=" md:w-1/2 p-10 bg-white rounded-lg shadow-xl mt-10 md:mt-0">

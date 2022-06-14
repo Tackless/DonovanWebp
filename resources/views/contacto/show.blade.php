@@ -5,11 +5,11 @@
 @endsection 
 
 @section('contenido')
-    <h1 class="p-6 text-7xl text-white font-bold bg-orange-500 mb-6 shadow-lg">@yield('titulo')</h1>
+    <h1 class="p-6 text-4xl md:text-7xl text-white font-bold bg-orange-500 mb-6 shadow-lg">@yield('titulo')</h1>
 
     <div class="md:w-10/12 mx-auto">
-        <div class="bg-white p-6 rounded-lg shadow-xl">
-            <table class="table-fixed text-center ">
+        <div class="bg-white p-6 rounded-lg shadow-xl overflow-auto">
+            <table class="table-fixed text-center">
                 <thead>
                     <tr class="border-b-2 border-stone-900">
                         <th class="w-1/4 ">Nombre</th>
@@ -36,7 +36,7 @@
                 </tbody>
             </table>
 
-            <div class="my-10 flex justify-center">
+            <div class="my-10">
                 {{ $contactos->links() }}
             </div>
         </div>

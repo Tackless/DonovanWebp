@@ -36,8 +36,27 @@
 
     @yield('contenido')
 
-    <footer class=" mt-10 text-center p-5 text-gray-500 font-bold uppercase">
-        <a class=" font-bold text-black" href="{{ route('login') }}">Donovan WebP</a> - Todos los derechos reservados {{ now()->year }} &copy;
+    <footer class=" mt-10 p-5 text-gray-500 bg-white font-bold uppercase flex flex-col justify-between gap-5 ">
+        <div class="flex flex-col md:flex-row justify-around items-center">
+            <nav class=" text-black flex flex-col gap-5 w-full md:w-auto text-center">
+                <a class=" text-pink-500 hover:text-pink-600" href="/Front">Diseño</a>
+                <a class=" text-blue-500 hover:text-blue-600" href="/Back">Aplicaciones</a>
+                <a class=" text-yellow-300 hover:text-yellow-400" href="/Js">Utilidades Js</a>
+            </nav>
+            
+            <nav class=" text-black flex flex-col gap-5 w-full md:w-auto">
+                <a class=" text-center md:text-left text-orange-400 hover:text-orange-500 mt-4 md:mt-0" href="{{ route('contacto') }}">Contacto:</a>
+                <div class="flex flex-col sm:flex-row justify-between">
+                    <p>E-mail: </p>
+                    <a class=" sm:ml-5 lowercase text-blue-500" href="mailto:donovan.e.tg@gmail.com">donovan.e.tg@gmail.com</a>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between">
+                    <p>Teléfono: </p>
+                    <a class="text-blue-500" href="tel:+52-55-4782-4091">+52 55-4782-4091</a>
+                </div>
+            </nav>
+        </div>
+        <p class=" text-center"><a class=" font-bold text-black" href="{{ route('login') }}">Donovan WebP</a> - Todos los derechos reservados {{ now()->year }} &copy;</p>
     </footer>
     @stack('scripts')
 </body>

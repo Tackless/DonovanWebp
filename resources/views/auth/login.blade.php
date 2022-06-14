@@ -5,10 +5,10 @@
 @endsection
 
 @section('contenido')
-    <h1 class="p-6 text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
+    <h1 class="p-6 text-4xl md:text-7xl text-white font-bold bg-gray-500 mb-6 shadow-lg">@yield('titulo')</h1>
 
     <div class="md:flex md:justify-center md:gap-10 md:items-center mt-6">
-        <div class="md:w-6/12">
+        <div class="md:w-6/12 flex justify-center mb-5"">
             <img src="{{ asset('img/logo.png') }}" alt="Imagen registro">
         </div>
         <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">

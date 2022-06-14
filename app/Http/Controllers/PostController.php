@@ -77,8 +77,17 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
+        $descripcion = explode('/', $post->descripcion);
+        foreach ($descripcion as $i => $value) {
+            $descripcionDividida = explode(';', $value);
+            foreach ($descripcionDividida as $j => $item) {
+                $arregloDesc[$i][$j] = $item;
+            }
+        }
+
         return view('post.show', [
-            'post' => $post
+            'post' => $post,
+            'arregloDesc' => $arregloDesc
         ]);
     }
 

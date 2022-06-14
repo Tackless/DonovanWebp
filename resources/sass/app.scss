@@ -1,3 +1,4 @@
+
 // Required Core Stylesheet
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
@@ -6,4 +7,12 @@
 
 .glide__arrow {
     border: 1px dashed black ;
+}
+
+.back {
+    &:nth-child(even) {
+        @media (min-width: 1280px) {
+            flex-direction: row-reverse;
+        }
+    }
 }
