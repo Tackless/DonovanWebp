@@ -21,20 +21,20 @@
                         <div class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
                                 @for ($i = 1; $i < $post->num_Img; $i++)
-                                    <div class="carousel-item active relative float-left w-full">
-                                        <img src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-' . $i . '.webp' }}" class="glide__slide" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"/>
-                                    </div>
+                                    <li class="carousel-item active relative float-left w-full">
+                                        <img width="250px" height="250px" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-' . $i . '.webp' }}" class="glide__slide" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"/>
+                                    </li>
                                 @endfor
                             </ul>
                         </div>
 
                         <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                            <button aria-label="anterior" class="glide__arrow glide__arrow--left" data-glide-dir="<">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                                 </svg>
                             </button>
-                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                            <button aria-label="siguiente" class="glide__arrow glide__arrow--right" data-glide-dir=">">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                                 </svg>
@@ -43,7 +43,7 @@
                     </div>
                 @else
                     <div class="carousel-item active relative float-left w-full">
-                        <img src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-1.webp' }}" class="glide__slide" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"
+                        <img width="250px" height="250px" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-1.webp' }}" class="glide__slide" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"
                         />
                     </div>
                 @endif
@@ -56,7 +56,7 @@
     @else
         @foreach ($arregloDesc as $key => $items)
             <div class="back flex flex-col xl:flex-row gap-5 p-10 justify-center items-center">
-                <img class=" xl:w-8/12" src="{{ asset('img/Back/DevStagram-' . $key . '.webp') }}" alt="Devstagram imagen">
+                <img width="250px" height="250px" class=" xl:w-8/12" src="{{ asset('img/Back/DevStagram-' . $key . '.webp') }}" alt="Devstagram imagen">
                 <p class="xl:w-3/12 block w-full bg-white shadow-lg p-5 rounded">
                     @foreach ($items as $key => $item)
                         {{ $item }}
