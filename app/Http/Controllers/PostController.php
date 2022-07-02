@@ -55,7 +55,7 @@ class PostController extends Controller
                 $imagenServidor = Image::make($imagen)->encode('webp');
 
                 /* Creating a path to the image. */
-                $imagenPath = public_path('img') . '/' . $request->categoria . '/' .  $nombreImagen;
+                $imagenPath = base_path('public_html/img') . '/' . $request->categoria . '/' .  $nombreImagen;
 
                 /* Saving the image to the path specified. */
                 $imagenServidor->save($imagenPath);
@@ -99,7 +99,7 @@ class PostController extends Controller
 
         // Eliminar la imagen
         for ($i=0; $i < $post->num_Img; $i++) { 
-            $imagenPath = public_path('img') . '/' . $categoria . '/' . str_replace(' ', '_', $post->titulo) . '-' . $i . '.webp';
+            $imagenPath = base_path('public_html/img') . '/' . $categoria . '/' . str_replace(' ', '_', $post->titulo) . '-' . $i . '.webp';
             if(File::exists($imagenPath)) {
                 unlink($imagenPath);
             }

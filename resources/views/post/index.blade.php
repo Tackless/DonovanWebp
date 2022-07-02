@@ -21,9 +21,9 @@
             @if ($posts->count())
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach ($posts as $post)
-                        <div class="">
+                        <div class=" flex justify-center">
                             <a href="{{ route('posts.show', ['post' => $post]) }}">
-                                <img width="250px" height="250px" class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-0.webp'}}" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"> 
+                                <img width="250px" height="250px" class="hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded w-full" src="{{ asset('img') . '/' . $post->categoria . '/' . $post->titulo . '-0.webp'}}" alt="Imagen del post {{ str_replace('_', ' ', $post->titulo) }}"> 
                             </a>
                             {{-- . '-' . $key . '.webp' --}}
                         </div>
