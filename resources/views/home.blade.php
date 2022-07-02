@@ -20,7 +20,7 @@
             @foreach ($postsFront as $post)
                 <div class="flex justify-center items-center">
                     <a href="{{ route('posts.show', ['post' => $post]) }}">
-                        <img class=" overflow-hidden hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" width="250px" height="250px" src="{{ asset('img/Front/' . $post->titulo . '-0.webp') }}" alt="frontend festival musica">
+                        <img class="w-full overflow-hidden hover:transform transition-transform ease-in-out duration-500 hover:scale-110 rounded" width="250px" height="250px" src="{{ asset('img/Front/' . $post->titulo . '-0.webp') }}" alt="Diseño de {{$post->titulo}}">
                     </a>
                 </div>
             @endforeach
@@ -42,21 +42,21 @@
 
                 <a class=" bg-blue-500 hover:bg-blue-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="/Back">Ver más...</a>
             </div>
-            <img class="col-span-2 rounded shadow-lg" width="250px" height="250px" src="{{ asset('img/Back/1-1.webp') }}" alt="devstagram post">
+            <img class="col-span-2 rounded shadow-lg w-full" width="250px" height="250px" src="{{ asset('img/Back/1-1.webp') }}" alt="devstagram post">
         </div>
     </section>
 
     <section class=" container text-center mx-auto">
         <h2 class="p-6 text-4xl md:text-7xl text-black font-bold bg-yellow-300 rounded-xl mb-6 shadow-lg">Utilidades</h2>
         <div class="">
-            <div class="grid lg:grid-cols-3 gap-4  items-center mb-6">
-                <img width="250px" height="250px" class="col-span-2 w-full shadow-lg rounded" src="{{ asset('img/Js/Enviar_Email-0.webp') }}" alt="tip generator">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
-            </div>
-            <div class="grid lg:grid-cols-3 gap-4  items-center mb-6">
-                <p class=" order-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nesciunt doloribus laboriosam voluptatibus maiores sunt sit, voluptatum vitae debitis sapiente iure aliquid doloremque voluptate fuga fugiat reiciendis. Totam, officiis itaque?</p>
-                <img width="250px" height="250px" class="col-span-2 w-full shadow-lg rounded lg:order-3" src="{{ asset('img/Js/Tip_Splitter-0.webp') }}" alt="email sender">
-            </div>
+            @foreach ($postsJs as $post)
+                <div class="grid lg:grid-cols-3 gap-4 w-full items-center mb-6 js">
+                    <a class="col-span-2 w-full shadow-lg rounded" href="{{ route('posts.show', ['post' => $post]) }}">
+                        <img class="w-full" width="250px" height="250px" src="{{ asset('img/Js/' . $post->titulo . '-0.webp') }}" alt="Utilidad de {{ $post->titulo }}">
+                    </a>
+                    <p class="col-span-2 lg:col-span-1 ">{{$post->descripcion}}</p>
+                </div>
+            @endforeach
             <a class=" bg-yellow-300 hover:bg-yellow-400 px-6 py-2 text-2xl rounded-xl text-black m-8" href="/Js">Ver más...</a>
         </div>
     </section>
