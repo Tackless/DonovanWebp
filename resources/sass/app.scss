@@ -17,6 +17,21 @@
     }
 }
 
+.js {
+    &:nth-child(even) {
+        @media (min-width: 1024px) {
+            a {
+                grid-column: 2 / 4;
+            }
+
+            p {
+                grid-column: 1 / 2;
+                grid-row: 1/2;
+            }
+        }
+    }
+}
+
 img {
     width: 90%;
     height: auto;
