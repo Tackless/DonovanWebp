@@ -9,7 +9,7 @@
     <section class=" container text-center mx-auto mb-10">
         <h1 class="p-6 text-4xl md:text-7xl text-white font-bold bg-green-600 rounded-xl rounded-t-none mb-6 shadow-lg">@yield('titulo')</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, distinctio nobis. Laboriosam facilis id delectus non voluptatem reprehenderit laborum, illo quis eveniet aut totam tenetur quas a sequi ea distinctio?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim sit facere velit neque perferendis repudiandae nisi est itaque, autem, modi cupiditate alias! Impedit, dolores at quod voluptate eum minima architecto?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ut nemo sed quo, vel dignissimos officiis sit, hic quam voluptatem et totam rem qui facilis eligendi sapiente expedita modi nihil!</p>
+        <p class="text-base md:text-2xl mx-auto max-w-4xl bg-slate-200 p-5 roundedsssssssss">Un sitio web te puede servir para todo tipo de actividades, como tener una tienda virtual para conseguir más clientes, un foro para poder crear una comunidad, un blog para compartir tus experiencias de los temas que quieras o un muro para exponer tu trabajo. Sea cual sea tu giro un sitio web te ayudará a crecer, por ejemplo este sitio es para conocer mi trabajo y <span class="font-bold">¡Así puedas obtener ideas para crear tu siguiente gran proyecto!</span></p>
 
     </section>
 
@@ -33,12 +33,7 @@
         <h2 class="p-6 text-4xl md:text-7xl text-white font-bold bg-blue-600 rounded-xl mb-6 shadow-lg">Aplicaciones</h2>
         <div class="grid lg:grid-cols-3 lg:gap-5 mb-6">
             <div class="flex flex-col items-center justify-center bg-blue-300 md:rounded-xl lg:m-auto p-5 shadow-lg mb-4"> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A tenetur vitae, temporibus dicta quidem neque nostrum et, tempora modi adipisci impedit est? Dolore labore magni reiciendis soluta perspiciatis hic vero!
-                    <br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti illo, modi veniam blanditiis voluptatem impedit nemo excepturi! Maiores vero ducimus necessitatibus inventore odio? Repellat nisi amet perferendis sit incidunt dolor?
-                    <br>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat voluptatibus, adipisci doloribus iste velit ducimus odit ipsa fugit nemo dolore possimus, in nostrum quis accusantium harum sunt, excepturi illo? Tempore!
-                </p>
+                <p>Consigue una aplicación web para poder gestionar tus usuarios, tus clientes, tus propiedades, tus productos, etc. ¡Todo lo que necesites! <br> Se puede hacer desde una agenda de citas hasta una plataforma similar a Instagram, pasando por un gestor de propiedades o de tareas. <br> ¡El limite es tu imaginación!</p>
 
                 <a class=" bg-blue-500 hover:bg-blue-600 px-6 py-2 text-2xl rounded-xl text-white m-8" href="/Back">Ver más...</a>
             </div>
