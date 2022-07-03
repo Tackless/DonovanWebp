@@ -56,7 +56,7 @@
     @else
         @foreach ($arregloDesc as $key => $items)
             <div class="back flex flex-col xl:flex-row gap-5 p-10 justify-center items-center">
-                <img width="250px" height="250px" class=" xl:w-8/12" src="{{ asset('img/Back/' . $post->titulo . '-' . $key . '.webp') }}" alt="Devstagram imagen">
+                <img width="250px" height="250px" class=" xl:w-8/12" src="{{ asset('img/Back/' . $post->titulo . '-' . $key . '.webp') }}" alt="{{ $post->titulo . $key}}">
                 <p class="xl:w-3/12 block w-full bg-white shadow-lg p-5 rounded">
                     @foreach ($items as $key => $item)
                         {{ $item }}
