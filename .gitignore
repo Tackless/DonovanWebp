@@ -1,5 +1,6 @@
 /node_modules
 /public/hot
+/public/build
 /public/img/Front/*
 /public/img/Back/*
 /public/img/Js/*
