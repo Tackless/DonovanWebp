@@ -9,7 +9,7 @@
     <section class=" container text-center mx-auto mb-10">
         <h1 class="p-6 text-4xl md:text-7xl text-white font-bold bg-green-600 rounded-xl rounded-t-none mb-6 shadow-lg">@yield('titulo')</h1>
 
-        <p class="text-base md:text-2xl mx-auto max-w-4xl bg-slate-200 p-5 roundedsssssssss">Un sitio web te puede servir para todo tipo de actividades, como tener una tienda virtual para conseguir más clientes, un foro para poder crear una comunidad, un blog para compartir tus experiencias de los temas que quieras o un muro para exponer tu trabajo. Sea cual sea tu giro un sitio web te ayudará a crecer, por ejemplo este sitio es para conocer mi trabajo y <span class="font-bold">¡Así puedas obtener ideas para crear tu siguiente gran proyecto!</span></p>
+        <p class="text-base md:text-2xl mx-auto max-w-4xl bg-slate-200 p-5 rounded">Un sitio web te puede servir para todo tipo de actividades, como tener una tienda virtual para conseguir más clientes, un foro para poder crear una comunidad, un blog para compartir tus experiencias de los temas que quieras o un muro para exponer tu trabajo. Sea cual sea tu giro un sitio web te ayudará a crecer, por ejemplo este sitio es para conocer mi trabajo y <span class="font-bold">¡Así puedas obtener ideas para crear tu siguiente gran proyecto!</span></p>
 
     </section>
 
